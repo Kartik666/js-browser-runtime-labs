@@ -1,0 +1,34 @@
+
+---
+
+## Step-by-step explanation
+
+### 1. Synchronous execution
+- Click handler runs
+- `asyncFunction()` is called
+- Everything **before `await` runs immediately**
+
+### 2. Encountering `await`
+- `await Promise.resolve()` pauses the async function
+- Remaining code is queued as a **microtask**
+
+### 3. Microtask queue
+- `Promise.then`
+- `async function continuation`
+
+### 4. Macrotask phase
+- `setTimeout` executes last
+
+---
+
+## Mental model (important)
+
+> `await` is syntax sugar for `.then()`
+
+```js
+await promise;
+
+// roughly equivalent to:
+promise.then(() => {
+  // continuation
+});
