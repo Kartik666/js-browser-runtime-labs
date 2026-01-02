@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Microtasks vs Macrotasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 24px;
+            background: #2B3033;
+            color: #e5e7eb;
+        }
+
+        button {
+            padding: 10px 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #020617;
+            padding: 16px;
+            margin-top: 16px;
+            overflow-x: auto;
+        }
+
+        #run {
+            background-color: #00A9FA;
+            color: #e5e7eb;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+        }
+
+        a {
+            color: #00A9FA;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Microtasks vs Macrotasks</h1>
+    <p>Open DevTools → Console before clicking the button.</p>
+
+    <button id="run">Run Experiment</button>
+
+    <pre>
+Expected order:
+1. Sync logs
+2. Microtasks (Promise)
+3. Macrotasks (setTimeout)
+4. Rendering happens between tasks
+
+<a target="_blank" href="https://www.youtube.com/watch?v=eiC58R16hb8"> 🎥 Video Explanation</a>
+    </pre>
+
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>

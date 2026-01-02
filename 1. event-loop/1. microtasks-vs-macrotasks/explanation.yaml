@@ -1,0 +1,39 @@
+
+---
+
+## Why this order happens
+
+### 1. Synchronous code
+Runs immediately on the call stack.
+
+### 2. Microtasks
+- Promise callbacks
+- `queueMicrotask`
+- `MutationObserver` executed after DOM mutations and before rendering.
+- Drained **completely** before moving on
+
+### 3. Rendering phase
+- Browser gets a chance to paint
+- `requestAnimationFrame` runs **before paint**
+
+### 4. Macrotasks
+- `setTimeout`
+- `setInterval`
+- I/O callbacks
+
+---
+
+## Real-world implications
+
+- Heavy microtasks can **starve rendering**
+- Excessive Promise chains can cause UI jank
+- `requestAnimationFrame` is ideal for animations
+- `setTimeout(fn, 0)` is **not immediate**
+
+---
+
+## Interview-ready takeaway
+
+> “The browser always drains the microtask queue before rendering or executing the next macrotask.”
+
+---
