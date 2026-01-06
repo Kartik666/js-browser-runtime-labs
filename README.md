@@ -11,10 +11,7 @@ Serve as a long-term reference for interviews and real-world debugging
 # Repo Structure
 js-browser-runtime-labs/
 │
-├── event-loop/
-│ ├── microtasks-vs-macrotasks/
-│ ├── async-await-timing/
-│ └── promises-queue-order/
+├── event-loop
 │
 ├── rendering-pipeline/
 │ ├── layout-paint-composite/
