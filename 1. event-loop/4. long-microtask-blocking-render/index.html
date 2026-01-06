@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Long Microtask Blocking Render</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 24px;
+        background: #020617;
+        color: #e5e7eb;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: limegreen;
+        margin-top: 20px;
+        transition: transform 0.3s;
+      }
+      button {
+        padding: 10px 16px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Long Microtask Blocking Render</h1>
+    <p>Click the button. Watch the box and the console.</p>
+
+    <button id="run">Run Experiment</button>
+    <div class="box" id="box"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

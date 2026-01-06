@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Worker Offloading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 24px;
+        background: #020617;
+        color: #e5e7eb;
+      }
+      .box {
+        width: 60px;
+        height: 60px;
+        background: limegreen;
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Web Worker Offloading</h1>
+    <p>Compare main thread vs worker execution.</p>
+
+    <button id="main">Run on Main Thread</button>
+    <button id="worker">Run in Web Worker</button>
+
+    <div class="box" id="box"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
